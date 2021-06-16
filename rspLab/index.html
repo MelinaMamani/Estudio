@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/EnumSexo.js"></script>
+    <script src="./js/Persona.js"></script>
+    <script src="./js/Cliente.js"></script>
+    <script src="./js/funciones.js"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Personas</title>
+</head>
+<body>
+    <h2>ABM Personas</h2>
+    <div class="container-modificar" id="container-modificar">
+
+        <form class="form-modificar">
+            
+            <label for="id">Id:</label>
+            <input type="number" id="id" disabled>
+            
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" required>
+            
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad">
+            
+            <label for="sexo">Sexo:</label>
+            <br>
+            <select name="ESexo" id="sexo">
+                <option value="Femenino" selected>Femenino</option>
+                <option value="Masculino">Masculino</option>
+                </select>
+            <br>
+            <div class="container-botones">
+                <button class="botonModificar" type="button" id="btnGuardar">Guardar</button>
+                <button class="botonEliminar" type="button" id="btnEliminar">Eliminar</button>
+            </div>
+        </form>
+    </div>
+
+    <h1>Filtros</h1>
+
+    <div class="filtros">
+            <label for="filtrar">Filtrar por: </label>
+            <select name="filtro-personas" id="filtro-personas">
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+            </select>
+            <label for="promedio">Promedio de edad: </label>
+            <input type="number" name="promedio" id="promedio" disabled>
+
+            <button class="calc-promedio" type="button" id="calc-promedio">Calcular Promedio</button>
+    </div>
+
+    <h1>Campos</h1>
+    <div class="campos">
+        <label for="checkId">ID </label>
+        <input type="checkbox" name="checkId" id="checkId" checked>
+        <label for="checkNombre">Nombre </label>
+        <input type="checkbox" name="checkNombre" id="checkNombre" checked>
+        <label for="checkApellido">Apellido </label>
+        <input type="checkbox" name="checkApellido" id="checkApellido" checked>
+        <label for="checkEdad">Edad </label>
+        <input type="checkbox" name="checkEdad" id="checkEdad" checked>
+        
+    </div>
+
+
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Sexo</th>
+            </tr>
+        </thead>
+        <tbody id="tCuerpo"></tbody>
+    </table>
+
+</body>
+</html>

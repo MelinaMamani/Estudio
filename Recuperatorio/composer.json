@@ -1,0 +1,8 @@
+{
+    "name": "cliente/recuperatorio",
+    "require": {
+        "firebase/php-jwt": "^5.2",
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.1"
+    }
+}

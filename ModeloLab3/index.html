@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./mascota.js"></script>
+    <script src="./gato.js"></script>
+    <script src="./perro.js"></script>
+    <script src="./tpajaros.js"></script>
+    <script src="./pajaro.js"></script>
+    <script src="./funciones.js"></script>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    
+    <div id="selecion">
+        <br>
+        <label>Tipo de mascota</label>
+        <br>
+    </div>
+    <select name="mascota" id="tipoMascota">
+        <option value="">Selecione Mascota</option>
+        <option value="gato">Gato</option>
+        <option value="perro">Perro</option>
+        <option value="pajaro">Pajaro</option>
+    </select>
+
+
+    <fieldset id="agregarGato" class="contenedor" hidden>
+        <div class="dcerrar">
+            <button id=cerrarGato class="salir">X</button>
+        </div>
+        <input type="hidden" id="id">
+        <label>Nombre:</label>
+        <br>
+        <input type="text" id="nameCat" width="50px">
+        <br>
+        <br>
+        <label>Vidas:</label>
+        <br>
+        <input type="number" size="35" id="life">
+        <br>
+        <br>
+        <div class="botones">
+        <button type="button" id="guardarGato" class="guardar"> Guardar </button>
+        <button type="button" id="eliminar" class="elimina"> Eliminar </button></div>
+     </fieldset>
+
+     
+    <fieldset id="agregarPerro" class="contenedor" hidden>
+        <div class="dcerrar">
+            <button id=cerrarPerro class="salir">X</button>
+        </div>
+        <input type="hidden" id="id">
+        <label>Nombre:</label>
+        <br>
+        <input type="text" id="nameDog" width="50px">
+        <br>
+        <br>
+        <label>Raza:</label>
+        <br>
+        <input type="text" size="35" id="raza">
+        <br>
+        <br>
+        <div class="botones">
+        <button type="button" id="guardarPerro" class="guardar"> Guardar </button>
+        <button type="button" id="eliminar" class="elimina"> Eliminar </button></div>
+     </fieldset>
+
+     <fieldset id="agregarPajaro" class="contenedor" hidden>
+        <div class="dcerrar">
+            <button id=cerrarPajaro class="salir">X</button>
+        </div>
+        <input type="hidden" id="id">
+        <label>Nombre:</label>
+        <br>
+        <input type="text" id="nameBird" width="50px">
+        <br>
+        <br>
+        <label>Tipo:</label>
+        <select name="tipoPajaro" id="typeBird">
+            <option value="">Selecione tipo de pajaro</option> <!--Se manda lo que este en el value-->
+            <option value="Rapinia">Rapiña</option>
+            <option value="Loro">Loro</option>    
+        </select>
+        <br>
+        <div class="botones">
+        <button type="button" id="guardarPajaro" class="guardar"> Guardar </button>
+        <button type="button" id="eliminar" class="elimina"> Eliminar </button></div>
+     </fieldset>
+
+    
+
+
+
+
+        <table id="tablaGato" width=100% hidden>
+            <thead class="tabla">
+                <tr> 
+                    <th>Nombre</th>
+                    <th>Vidas</th>
+                </tr>
+            </thead>
+           <tbody id="cuerpoGato">
+           </tbody>
+         </table>
+
+         <table id="tablaPerro" width=100% hidden>
+            <thead class="tabla">
+                <tr> 
+                    <th>Nombre</th>
+                    <th>Raza</th>
+                </tr>
+            </thead>
+           <tbody id="cuerpoPerro">
+           </tbody>
+         </table>
+
+         <table id="tablaPajaro" width=100% hidden>
+            <thead class="tabla">
+                <tr> 
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                </tr>
+            </thead>
+           <tbody id="cuerpoPajaro">
+           </tbody>
+         </table>
+
+
+
+</body>
+</html>

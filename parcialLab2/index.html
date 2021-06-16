@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/funciones.js"></script>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <title>Vehiculos</title>
+</head>
+<body>
+    <div class="navbar">
+        <h2>AUTOS</h2>
+        <button class="botonAgregar" type="button" id="btnAlta" >Dar de alta</button>
+    </div>
+
+    <div class="backdrop" id="backdrop">
+        <div class="container-modificar" id="container-modificar">
+
+            <form class="form-modificar">
+                
+                <label for="idMod">Id:</label>
+                <input type="number" id="idMod" disabled>
+                <label for="marcaMod">Marca:</label>
+                <input type="text" id="marcaMod" required>
+                <label for="modeloMod">Modelo:</label>
+                <input type="text" id="modeloMod" required>
+                <label for="precioMod">Precio:</label>
+                <input type="number" id="precioMod">
+                <label for="tipoMod">Tipo:</label>
+                <br>
+                <select name="tipo" id="tipoMod">
+                    <option value="Camioneta" selected>Camioneta</option>
+                    <option value="Auto">Auto</option>
+                    </select>
+                <br>
+                <div class="container-botones">
+                    <button class="botonModificar" type="button" id="btnModificar">Guardar</button>
+                    <button class="botonEliminar" type="button" id="btnCerrarMod">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <table id="tablaAuto" width=100% hidden>
+        <thead class="tabla">
+            <tr> 
+                <th>Nombre</th>
+                <th>Vidas</th>
+            </tr>
+        </thead>
+       <tbody id="cuerpoAuto">
+       </tbody>
+     </table>
+
+     <table id="tablaCamioneta" width=100% hidden>
+        <thead class="tabla">
+            <tr> 
+                <th>Nombre</th>
+                <th>Raza</th>
+            </tr>
+        </thead>
+       <tbody id="cuerpoCamioneta">
+       </tbody>
+     </table>
+</body>
+</html>
